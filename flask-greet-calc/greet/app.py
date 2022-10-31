@@ -15,3 +15,5 @@ def welcome_home_page():
 def welcome_back_page():
     return 'welcome back'
 
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,19 +1,14 @@
-# Put your app in here.
-from flask import Flask
+from flask import Flask, request
+from operations import add, sub, mult, div
 
 app = Flask(__name__)
 
-@app.route('/welcome')
-def welcome_page():
-    return 'welcome'
+@app.route('/')
+def main_page():
+    return 'the main page for the Flask calculator exercise'
 
-@app.route('/welcome/home')
-def welcome_home_page():
-    return 'welcome home'
 
-@app.route('/welcome/back')
-def welcome_back_page():
-    return 'welcome back'
+
 
 if __name__ == '__main__':
     app.run(debug=True)
